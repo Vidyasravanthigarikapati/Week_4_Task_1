@@ -31,9 +31,9 @@ require([
 
   var symbol = {
       type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
-      url: "https://static.thenounproject.com/png/1994291-512.png",
-      width: "12px",
-      height: "12px"
+      url: "https://cdn.iconscout.com/icon/premium/png-256-thumb/hockey-240-984443.png",
+      width: "24px",
+      height: "24px"
     };
     var renderer = {
       type: "simple",  // autocasts as new SimpleRenderer()
