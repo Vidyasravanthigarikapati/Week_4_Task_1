@@ -29,10 +29,22 @@ require([
     `
   };
 
-  var featureLayer = new FeatureLayer({
+  var symbol = {
+      type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+      url: "https://static.thenounproject.com/png/1994291-512.png",
+      width: "12px",
+      height: "12px"
+    };
+    var renderer = {
+      type: "simple",  // autocasts as new SimpleRenderer()
+      symbol: symbol
+    };
+
+var featureLayer = new FeatureLayer({
     url: "https://services2.arcgis.com/bB9Y1bGKerz1PTl5/ArcGIS/rest/services/STL_Neighborhood/FeatureServer/0",
     outFields: ["*"], // include all fields
-    popupTemplate: template
+    popupTemplate: template,
+    renderer:renderer
   });
 
   /*
